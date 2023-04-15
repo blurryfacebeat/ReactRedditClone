@@ -8,7 +8,7 @@ const moduleName = process.argv[3];
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const pathToCreate = resolve(__dirname, `src/${modulePath}/${moduleName}`);
+const pathToCreate = resolve(__dirname, '..', `src/${modulePath}/${moduleName}`);
 const tsxFilePath = `${pathToCreate}/${moduleName}.tsx`;
 const indexFilePath = `${pathToCreate}/index.ts`;
 const stylesFilePath = `${pathToCreate}/${moduleName}.module.scss`;

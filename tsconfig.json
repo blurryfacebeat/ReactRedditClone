@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "module": "commonjs", // Модуль генерации кода.
+        "module": "esnext", // Модуль генерации кода.
         "target": "esnext", // Код, в который транспилируется ваш код.
         "sourceMap": true, // Сгенерировать map файлы.
         "resolveJsonModule": true, // Включить модули, импортированные с расширением .json.
@@ -16,7 +16,8 @@
         "baseUrl": ".", // Базовый путь.
         "paths": { // Алиасы.
             "@/*": ["src/*"]
-        }
+        },
+        "moduleResolution": "node"
     },
     "include": ["src/**/*", "declarations/*"], // Включения.
     "exclude": [ // Исключения.

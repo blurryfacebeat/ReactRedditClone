@@ -1,0 +1,15 @@
+.sortBlock {
+  padding: 11px 20px;
+  margin: 0 0 20px;
+
+  border-radius: 7px;
+  background-color: var(--main-white);
+
+  @media all and (min-width: 1024px) {
+    margin: 0;
+    padding: 0;
+
+    background-color: transparent;
+    border-radius: 0;
+  }
+}

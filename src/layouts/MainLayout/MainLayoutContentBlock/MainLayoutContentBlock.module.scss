@@ -1,0 +1,6 @@
+.contentBlock {
+  @media all and (min-width: 1024px) {
+    border-radius: 7px 7px 0 0;
+    background-color: var(--main-white);
+  }
+}

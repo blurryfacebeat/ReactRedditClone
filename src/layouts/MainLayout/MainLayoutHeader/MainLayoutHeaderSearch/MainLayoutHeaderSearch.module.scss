@@ -1,0 +1,22 @@
+.searchBlock {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  margin: 0 0 38px;
+
+  background-color: var(--main-white);
+  border-radius: 0 0 7px 7px;
+  box-shadow: 0 0 20px var(--black-opacity-0-1);
+
+  @media all and (min-width: 1024px) {
+    padding: 0;
+    margin: 0 0 0 auto;
+    order: 3;
+
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}

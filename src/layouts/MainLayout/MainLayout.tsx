@@ -2,6 +2,9 @@ import React, { FunctionComponent } from 'react';
 
 import { IMainLayoutProps } from 'src/layouts/MainLayout/MainLayout.types';
 
+import { MainLayoutHeader } from '@/layouts/MainLayout/MainLayoutHeader';
+import { MainLayoutContentBlock } from '@/layouts/MainLayout/MainLayoutContentBlock';
+
 import styles from './MainLayout.module.scss';
 
 const MainLayout = (props: IMainLayoutProps) => {
@@ -9,8 +12,8 @@ const MainLayout = (props: IMainLayoutProps) => {
 
   return (
     <div className={styles.layout}>
-      <header>header</header>
-      <main>{children}</main>
+      <MainLayoutHeader />
+      <MainLayoutContentBlock>{children}</MainLayoutContentBlock>
     </div>
   );
 };
