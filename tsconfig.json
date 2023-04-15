@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "module": "commonjs", // Модуль генерации кода.
+        "target": "esnext", // Код, в который транспилируется ваш код.
+        "sourceMap": true, // Сгенерировать map файлы.
+        "resolveJsonModule": true, // Включить модули, импортированные с расширением .json.
+        "esModuleInterop": true, // Отключить импорт пространств имен. https://www.typescriptlang.org/tsconfig#esModuleInterop
+        "forceConsistentCasingInFileNames": true, // Запретить ссылки на один и тот же файл, написанный в другом регистре.
+        "allowJs": true, // Разрешить компиляцию JS-файлов.
+        "strict": true, // Включить все опции строгой проверки типов.
+        "noEmit": true, // Не компилировать код, а только проверять типы, потому что Babel и так компилирует TS. (Потому что, ts-loader не работает с SSR нормально, нужен Babel).
+        "declaration": true, // Сгенерировать соответствующий файл .d.ts.
+        "experimentalDecorators": true, // Включить экспериментальную поддержку для декораторов ES.
+        "skipLibCheck": true, // Пропустить проверку типов файлов объявлений.
+        "jsx": "react", // Поддержка JSX в файлах .tsx.
+        "baseUrl": ".", // Базовый путь.
+        "paths": { // Алиасы.
+            "@/*": ["src/*"]
+        }
+    },
+    "include": ["src/**/*", "declarations/*"], // Включения.
+    "exclude": [ // Исключения.
+        "node_modules"
+    ]
+}
