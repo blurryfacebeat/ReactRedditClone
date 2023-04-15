@@ -1,0 +1,11 @@
+import React from 'react';
+
+import { AppRoutes } from '@/routes/routes';
+
+export const App = () => {
+  return (
+    <>
+      <AppRoutes />
+    </>
+  );
+};
