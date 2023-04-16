@@ -70,6 +70,11 @@ const clientConfig = {
           },
           {
             loader: 'sass-loader',
+            options: {
+              additionalData: `
+              @import "src/assets/styles/_mixins.scss";
+              `,
+            },
           },
         ],
       },
@@ -93,6 +98,11 @@ const clientConfig = {
           },
           {
             loader: 'sass-loader',
+            options: {
+              additionalData: `
+              @import "src/assets/styles/_mixins.scss";
+              `,
+            },
           },
         ],
       },
