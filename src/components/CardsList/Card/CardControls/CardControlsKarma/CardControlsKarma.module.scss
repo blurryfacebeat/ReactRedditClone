@@ -1,0 +1,48 @@
+.karmaCounter {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  @media all and (min-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.karmaValue {
+  color: var(--grey-7);
+}
+
+.triangle {
+  color: var(--grey-7);
+
+  cursor: pointer;
+  @include defaultTransition(color);
+}
+
+.triangleUp {
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--accent-green);
+    }
+  }
+
+  &:active {
+    color: var(--accent-green);
+  }
+}
+
+.triangleDown {
+  transform: rotate(180deg);
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--accent-red);
+    }
+  }
+
+  &:active {
+    color: var(--accent-red);
+  }
+}

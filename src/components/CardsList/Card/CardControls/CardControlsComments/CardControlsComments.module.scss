@@ -1,0 +1,17 @@
+.commentsButton {
+  display: flex;
+  align-items: normal;
+
+  color: var(--grey-7);
+
+  @media all and (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.commentsCounter {
+  padding: 0 0 0 6px;
+
+  font-size: 12px;
+  line-height: 14px;
+}

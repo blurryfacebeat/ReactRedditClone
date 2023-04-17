@@ -1,0 +1,79 @@
+.textContent {
+  display: flex;
+  flex-direction: column;
+  padding: 22px 20px 13px;
+  gap: 7px;
+
+  @media all and (min-width: 1024px) {
+    order: 1;
+  }
+
+  @media all and (min-width: 1540px) {
+    flex-basis: 672px;
+  }
+}
+
+.metaData {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 5px;
+
+  font-size: 10px;
+
+  @media all and (min-width: 1024px) {
+    order: 1;
+  }
+}
+
+.userLink {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 5px;
+
+  @media all and (min-width: 1024px) {
+    order: 1;
+  }
+}
+
+.createdAt, .createdAt * {
+  color: var(--grey-5);
+
+  @media all and (min-width: 1024px) {
+    order: 0;
+  }
+}
+
+.publishedLabel {
+  display: none;
+
+  @media all and (min-width: 1024px) {
+    display: inline;
+  }
+}
+
+.avatar {
+  width: 20px;
+  height: 20px;
+
+  border-radius: 20px;
+}
+
+.username {
+  color: var(--accent-orange);
+}
+
+.title {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 500;
+
+  @media all and (min-width: 1024px) {
+    order: 0;
+  }
+}
+
+.postLink {
+  @include withLineClamp(2);
+}
