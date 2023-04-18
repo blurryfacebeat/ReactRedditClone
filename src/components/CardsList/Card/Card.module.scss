@@ -5,6 +5,8 @@
 
   background-color: var(--main-white);
   border-radius: 7px;
+  border: 1px solid transparent;
+  @include defaultTransition(border-color);
 
   @media all and (min-width: 1024px) {
     max-width: 947px;
@@ -13,8 +15,17 @@
   }
 
   @media all and (min-width: 1540px) {
+    width: 100%;
     max-width: unset;
-    padding: 0 60px;
+    padding: 20px 60px;
+
+    border-radius: 0;
+
+    @media (any-hover: hover) {
+      &:hover {
+        border-color: var(--grey-1);
+      }
+    }
   }
 }
 
