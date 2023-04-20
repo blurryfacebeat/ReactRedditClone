@@ -11,6 +11,26 @@
   }
 }
 
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 10px;
+
+  box-shadow: 0 0 20px var(--black-opacity-0-15);
+  border-radius: 3px;
+  background-color: var(--main-white);
+}
+
+.closeButton {
+  width: 100%;
+  padding: 12px 23px;
+
+  border-radius: 0 0 3px 3px;
+  background-color: var(--grey-1);
+
+  cursor: pointer;
+}
+
 .threedotButton {
   width: 31px;
   height: 31px;

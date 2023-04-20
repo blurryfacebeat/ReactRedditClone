@@ -76,4 +76,15 @@
 
 .postLink {
   @include withLineClamp(2);
+  @include defaultTransition(color);
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: #CC6633;
+    }
+  }
+
+  &:active {
+    color: #CC6633;
+  }
 }
