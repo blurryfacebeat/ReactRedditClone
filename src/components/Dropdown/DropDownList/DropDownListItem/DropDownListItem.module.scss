@@ -1,0 +1,21 @@
+.dropDownListItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 20px;
+
+  color: var(--grey-5);
+
+  cursor: pointer;
+  @include defaultTransition(background-color);
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: var(--grey-4);
+    }
+  }
+
+  &:active {
+    background-color: var(--grey-3);
+  }
+}
