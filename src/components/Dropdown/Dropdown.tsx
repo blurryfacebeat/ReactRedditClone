@@ -20,7 +20,9 @@ const Dropdown = (props: IDropdownProps) => {
 
   return (
     <div data-testid="dropdown" className={styles.container}>
-      <div onClick={handleOpen}>{button}</div>
+      <div data-testid="dropdownActiveButton" onClick={handleOpen}>
+        {button}
+      </div>
       {isOpened && (
         <div className={styles.listContainer}>
           <div className={styles.list} onClick={() => setIsOpened(false)}>
