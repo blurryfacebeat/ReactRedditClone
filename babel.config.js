@@ -4,4 +4,9 @@ module.exports = {
     ['@babel/preset-react', { runtime: 'automatic' }],
     '@babel/preset-typescript',
   ],
+  env: {
+    production: {
+      plugins: [['react-remove-properties', { properties: ['data-testid', /my-suffix-expression$/] }]],
+    },
+  },
 };
