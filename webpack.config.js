@@ -1,13 +1,22 @@
+const { DefinePlugin } = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const openBrowser = require('react-dev-utils/openBrowser');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const openBrowser = require('react-dev-utils/openBrowser');
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const NODE_ENV = process.env.NODE_ENV;
 const IS_DEV = NODE_ENV === 'development';
 const IS_PROD = NODE_ENV === 'production';
+const COMMON_PLUGINS = [
+  new HtmlWebpackPlugin({
+    template: path.resolve(__dirname, 'public/index.html'),
+  }),
+  new DefinePlugin({
+    'process.env.CLIENT_ID': `'${process.env.CLIENT_ID}'`,
+  }),
+];
 
 const setupDevtool = () => {
   return IS_DEV ? 'source-map' : false; // Делаем качественные source maps в DEV-режиме
@@ -126,16 +135,12 @@ const clientConfig = {
   devtool: setupDevtool(), // Здесь устанавливаем devtools.
   plugins: IS_DEV // Если DEV-режим, то не ставим MiniCss, так как нам нужен hot reload
     ? [
-        new HtmlWebpackPlugin({
-          template: path.resolve(__dirname, 'public/index.html'),
-        }),
+        ...COMMON_PLUGINS,
         // new BundleAnalyzerPlugin(),
       ]
     : [
+        ...COMMON_PLUGINS,
         new CleanWebpackPlugin(),
-        new HtmlWebpackPlugin({
-          template: path.resolve(__dirname, 'public/index.html'),
-        }),
         new MiniCssExtractPlugin({
           filename: `styles/${generateFileName('name', 'css')}`,
           chunkFilename: `styles/${generateFileName('id', 'css')}`,

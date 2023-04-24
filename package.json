@@ -7,7 +7,7 @@
   "scripts": {
     "build:dev": "env NODE_ENV=development webpack --config webpack.config.js",
     "build:prod": "env NODE_ENV=production webpack --config webpack.config.js",
-    "dev": "env NODE_ENV=development webpack-dev-server",
+    "dev": "env NODE_ENV=development CLIENT_ID=z5ChF-An1rFv_IqlFCndyQ webpack-dev-server",
     "test": "jest --watch"
   },
   "keywords": [

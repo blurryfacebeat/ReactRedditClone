@@ -1,0 +1,61 @@
+.userBox {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  cursor: pointer;
+
+  p {
+    @include defaultTransition(color);
+  }
+
+  .avatarBox {
+    @include defaultTransition(box-shadow);
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      p {
+        color: var(--accent-orange) !important;
+      }
+
+      .avatarBox {
+        box-shadow: 0 0 0 1px var(--accent-orange);
+      }
+    }
+  }
+
+  &:active {
+    p {
+      color: var(--accent-orange);
+    }
+
+    .avatarBox {
+      box-shadow: 0 0 0 1px var(--accent-orange);
+    }
+  }
+}
+
+.avatarBox {
+  width: 60px;
+  height: 60px;
+  padding: 5px;
+  border-radius: 100%;
+  box-shadow: none;
+}
+
+.avatarImage {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.username {
+  display: none;
+
+  @media all and (min-width: 1024px) {
+    display: flex;
+  }
+}

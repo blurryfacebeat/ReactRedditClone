@@ -11,6 +11,7 @@ export const AppRoutes = () => {
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/auth" element={<HomePage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>
