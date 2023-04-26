@@ -1,4 +1,4 @@
 export interface IMainLayoutHeaderSearchUserBlockProps {
-  avatarSrc?: string;
-  username?: string;
+  avatarSrc: string;
+  username: string;
 }

@@ -1,3 +1,5 @@
+import { pipe } from '@/utils';
+
 export const pick =
   <K extends string>(prop: K) =>
   <O extends Record<K, any>>(obj: O) =>

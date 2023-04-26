@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useDevice } from '@/hooks';
-import { getCssVar } from '@/utils/css/getCssVar';
+import { getCssVar } from '@/utils';
 import { ITextProps } from '@/components/Text/Text.types';
 import { EDeviceType } from '@/hooks/useDevice/useDevice.types';
 
