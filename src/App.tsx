@@ -1,15 +1,24 @@
 import React, { useEffect } from 'react';
 
 import { AppRoutes } from '@/routes/routes';
+import { fetchProfileInfo } from '@/services';
+import { getQueryFromRedditAuth } from '@/utils/getQueryFromRedditAuth';
 import { setBaseHttpClientAuthorizationToken } from '@/modules/HttpClient/BaseHttpClient';
-import { useSearchParams } from 'react-router-dom';
 
 export const App = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
-
   useEffect(() => {
-    console.log(321, searchParams);
-    setBaseHttpClientAuthorizationToken({ token: 'fwqfwq', tokenType: 'bearer' });
+    const url = new URL(window.location.href);
+    const queryMap = getQueryFromRedditAuth(url.hash);
+
+    setBaseHttpClientAuthorizationToken({ token: queryMap.get('access_token'), tokenType: queryMap.get('token_type') });
+
+    fetchProfileInfo()
+      .then((res) => {
+        console.log(321, res);
+      })
+      .catch((err) => {
+        console.log(321, err);
+      });
   }, []);
 
   return (

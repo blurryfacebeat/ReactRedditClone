@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 import styles from './CardText.module.scss';
 
 const CardText = () => {
@@ -8,9 +10,9 @@ const CardText = () => {
       <div className={styles.metaData}>
         <div className={styles.userLink}>
           <img src="https://dota2.ru/img/heroes/pudge/portrait.jpg" alt="User avatar" className={styles.avatar} />
-          <a href="#user-url" className={styles.username}>
+          <Link to="/user-url" className={styles.username}>
             Дмитрий Гришин
-          </a>
+          </Link>
         </div>
         <span className={styles.createdAt}>
           <span className={styles.publishedLabel}>опубликовано </span>
@@ -19,9 +21,9 @@ const CardText = () => {
       </div>
 
       <h2 className={styles.title}>
-        <a href="#post-url" className={styles.postLink}>
+        <Link to="/post-url" className={styles.postLink}>
           Следует отметить, что новая модель организационной деятельности модель организационной деятельности
-        </a>
+        </Link>
       </h2>
     </div>
   );

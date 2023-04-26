@@ -1,7 +1,8 @@
 import React from 'react';
 
-import styles from './MainLayoutHeaderSearch.module.scss';
 import { MainLayoutHeaderSearchUserBlock } from '@/layouts/MainLayout/MainLayoutHeader/MainLayoutHeaderSearch/MainLayoutHeaderSearchUserBlock';
+
+import styles from './MainLayoutHeaderSearch.module.scss';
 
 const MainLayoutHeaderSearch = () => {
   return (

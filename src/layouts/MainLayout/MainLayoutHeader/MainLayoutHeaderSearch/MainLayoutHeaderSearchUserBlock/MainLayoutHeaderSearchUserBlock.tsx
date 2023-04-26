@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
 import { Text } from '@/components/Text';
 import UserAvatarIcon from '@/assets/icons/UserAvatar.svg';
 import { IMainLayoutHeaderSearchUserBlockProps } from '@/layouts/MainLayout/MainLayoutHeader/MainLayoutHeaderSearch/MainLayoutHeaderSearchUserBlock/MainLayoutHeaderSearchUserBlock.types';
@@ -13,7 +14,7 @@ const MainLayoutHeaderSearchUserBlock = (props: IMainLayoutHeaderSearchUserBlock
   const { avatarSrc, username } = props;
 
   return (
-    <a href={authLink} className={styles.userBox}>
+    <Link to={authLink} className={styles.userBox}>
       <div className={styles.avatarBox}>
         {avatarSrc ? <img src={avatarSrc} alt="User Avatar" className={styles.avatarImage} /> : <UserAvatarIcon />}
       </div>
@@ -23,7 +24,7 @@ const MainLayoutHeaderSearchUserBlock = (props: IMainLayoutHeaderSearchUserBlock
           {username || 'Аноним'}
         </Text>
       </div>
-    </a>
+    </Link>
   );
 };
 
