@@ -14,7 +14,7 @@ const CardTextTitle = () => {
         Следует отметить, что новая модель организационной деятельности модель организационной деятельности
       </p>
 
-      {isModalOpened && <Post />}
+      {isModalOpened && <Post closeModal={() => setIsModalOpened(false)} />}
     </h2>
   );
 };
