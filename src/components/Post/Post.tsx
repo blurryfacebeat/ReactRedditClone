@@ -1,6 +1,7 @@
 import { createPortal } from 'react-dom';
 import React, { useEffect, useRef } from 'react';
 
+import { CommentForm } from '@/components/CommentForm';
 import { IPostProps } from '@/components/Post/Post.types';
 
 import styles from './Post.module.scss';
@@ -52,6 +53,8 @@ const Post = (props: IPostProps) => {
             организационной деятельности поможет
           </p>
         </div>
+
+        <CommentForm />
       </div>
     </div>,
     node,
