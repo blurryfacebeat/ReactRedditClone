@@ -63,28 +63,3 @@
 .username {
   color: var(--accent-orange);
 }
-
-.title {
-  font-size: 16px;
-  line-height: 19px;
-  font-weight: 500;
-
-  @media all and (min-width: 1024px) {
-    order: 0;
-  }
-}
-
-.postLink {
-  @include withLineClamp(2);
-  @include defaultTransition(color);
-
-  @media (any-hover: hover) {
-    &:hover {
-      color: #CC6633;
-    }
-  }
-
-  &:active {
-    color: #CC6633;
-  }
-}

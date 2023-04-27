@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
+import { CardTextTitle } from '@/components/CardsList/Card/CardText/CardTextTitle';
 
 import styles from './CardText.module.scss';
 
@@ -20,11 +21,7 @@ const CardText = () => {
         </span>
       </div>
 
-      <h2 className={styles.title}>
-        <Link to="/post-url" className={styles.postLink}>
-          Следует отметить, что новая модель организационной деятельности модель организационной деятельности
-        </Link>
-      </h2>
+      <CardTextTitle />
     </div>
   );
 };
