@@ -17,7 +17,7 @@ const CommentForm = () => {
     <form className={styles.form} onSubmit={handleSubmit}>
       <textarea className={styles.input} value={value} onChange={handleChange} />
       <button className={styles.button} type="submit">
-        Комментировать
+        Комментировать!
       </button>
     </form>
   );
