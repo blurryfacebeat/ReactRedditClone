@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Text } from '@/components/Text';
 import { Dropdown } from '@/components/Dropdown';
 import ThreeDotIcon from '@/assets/icons/ThreedotIcon.svg';

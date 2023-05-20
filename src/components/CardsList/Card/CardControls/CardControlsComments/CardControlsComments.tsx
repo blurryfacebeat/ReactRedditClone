@@ -1,5 +1,3 @@
-import React from 'react';
-
 import CommentIcon from '@/assets/icons/CommentIcon.svg';
 
 import styles from './CardControlsComments.module.scss';

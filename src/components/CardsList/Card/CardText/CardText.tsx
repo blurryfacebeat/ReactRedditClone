@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Link } from 'react-router-dom';
 import { CardTextTitle } from '@/components/CardsList/Card/CardText/CardTextTitle';
 

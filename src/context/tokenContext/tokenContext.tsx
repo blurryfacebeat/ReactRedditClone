@@ -1,4 +1,4 @@
-import React, { createContext, useEffect } from 'react';
+import { createContext, useEffect } from 'react';
 
 import { getQueryFromRedditAuth } from '@/utils';
 import { ITokenContextData, ITokenContextProviderProps } from '@/context/tokenContext/tokenContext.types';

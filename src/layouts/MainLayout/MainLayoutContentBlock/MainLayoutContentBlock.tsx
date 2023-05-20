@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { IMainLayoutContentBlockProps } from '@/layouts/MainLayout/MainLayoutContentBlock/MainLayoutContentBlock.types';
 
 import styles from './MainLayoutContentBlock.module.scss';

@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { AppRoutes } from '@/routes/routes';
 import { UserContextProvider, TokenContextProvider } from '@/context';
 

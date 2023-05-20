@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Text } from '@/components/Text';
 import { IPropDownListProps } from '@/components/Dropdown/DropDownList/DropDownListItem/DropDownList.types';
 

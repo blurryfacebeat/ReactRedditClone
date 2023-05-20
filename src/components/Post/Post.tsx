@@ -1,5 +1,5 @@
 import { createPortal } from 'react-dom';
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 import { CommentForm } from '@/components/CommentForm';
 import { IPostProps } from '@/components/Post/Post.types';

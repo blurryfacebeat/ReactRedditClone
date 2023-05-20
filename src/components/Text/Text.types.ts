@@ -1,6 +1,6 @@
-import { ReactNode } from 'react';
+import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
 
-export interface ITextProps {
+export interface ITextProps extends DetailedHTMLProps<HTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement> {
   children: ReactNode;
   fontSize?: number;
   mobileFontSize?: number;

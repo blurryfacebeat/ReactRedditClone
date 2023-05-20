@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Link } from 'react-router-dom';
 import { Text } from '@/components/Text';
 import UserAvatarIcon from '@/assets/icons/UserAvatar.svg';

@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Card } from '@/components/CardsList/Card';
 
 import styles from './CardsList.module.scss';

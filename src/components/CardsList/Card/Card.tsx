@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { CardText } from '@/components/CardsList/Card/CardText';
 import { CardContent } from '@/components/CardsList/Card/CardContent';
 import { CardThreedot } from '@/components/CardsList/Card/CardThreedot';

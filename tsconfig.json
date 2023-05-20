@@ -14,6 +14,7 @@
         "skipLibCheck": true, // Пропустить проверку типов файлов объявлений.
         "jsx": "react", // Поддержка JSX в файлах .tsx.
         "baseUrl": ".", // Базовый путь.
+        "allowUmdGlobalAccess": true, // make typescript work with ProvidePlugin
         "paths": { // Алиасы.
             "@/*": ["src/*"]
         },

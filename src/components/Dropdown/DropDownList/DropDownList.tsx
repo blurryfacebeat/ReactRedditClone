@@ -1,5 +1,3 @@
-import React from 'react';
-
 import BlockIcon from '@/assets/icons/BlockIcon.svg';
 import WarningIcon from '@/assets/icons/WarningIcon.svg';
 import { DropDownListItem } from '@/components/Dropdown/DropDownList/DropDownListItem';

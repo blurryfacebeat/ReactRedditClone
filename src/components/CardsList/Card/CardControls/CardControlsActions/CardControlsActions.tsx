@@ -1,5 +1,3 @@
-import React from 'react';
-
 import LinkIcon from '@/assets/icons/LinkIcon.svg';
 import PlusLayerIcon from '@/assets/icons/PlusLayerIcon.svg';
 

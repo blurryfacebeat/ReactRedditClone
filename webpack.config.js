@@ -1,21 +1,42 @@
-const { DefinePlugin } = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const openBrowser = require('react-dev-utils/openBrowser');
+const { DefinePlugin, ProvidePlugin } = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const openBrowser = require('react-dev-utils/openBrowser');
-// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const NODE_ENV = process.env.NODE_ENV;
 const IS_DEV = NODE_ENV === 'development';
-const IS_PROD = NODE_ENV === 'production';
+
 const COMMON_PLUGINS = [
+  new ProvidePlugin({
+    React: 'react',
+  }),
   new HtmlWebpackPlugin({
     template: path.resolve(__dirname, 'public/index.html'),
   }),
   new DefinePlugin({
     'process.env.CLIENT_ID': `'${process.env.CLIENT_ID}'`,
   }),
+];
+
+const CSS_COMMON_OPTIONS = [
+  {
+    loader: 'postcss-loader',
+    options: {
+      postcssOptions: {
+        plugins: ['postcss-preset-env'],
+      },
+    },
+  },
+  {
+    loader: 'sass-loader',
+    options: {
+      additionalData: `
+              @import "src/assets/styles/_mixins.scss";
+              `,
+    },
+  },
 ];
 
 const setupDevtool = () => {
@@ -69,22 +90,7 @@ const clientConfig = {
               },
             },
           },
-          {
-            loader: 'postcss-loader',
-            options: {
-              postcssOptions: {
-                plugins: ['postcss-preset-env'],
-              },
-            },
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              additionalData: `
-              @import "src/assets/styles/_mixins.scss";
-              `,
-            },
-          },
+          ...CSS_COMMON_OPTIONS,
         ],
       },
       {
@@ -97,22 +103,7 @@ const clientConfig = {
           {
             loader: 'css-loader',
           },
-          {
-            loader: 'postcss-loader',
-            options: {
-              postcssOptions: {
-                plugins: ['postcss-preset-env'],
-              },
-            },
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              additionalData: `
-              @import "src/assets/styles/_mixins.scss";
-              `,
-            },
-          },
+          ...CSS_COMMON_OPTIONS,
         ],
       },
       {
@@ -134,10 +125,7 @@ const clientConfig = {
   },
   devtool: setupDevtool(), // Здесь устанавливаем devtools.
   plugins: IS_DEV // Если DEV-режим, то не ставим MiniCss, так как нам нужен hot reload
-    ? [
-        ...COMMON_PLUGINS,
-        // new BundleAnalyzerPlugin(),
-      ]
+    ? [...COMMON_PLUGINS]
     : [
         ...COMMON_PLUGINS,
         new CleanWebpackPlugin(),
@@ -171,7 +159,7 @@ const clientConfig = {
   },
   devServer: {
     port: 3000,
-    open: true,
+    open: false,
     hot: IS_DEV,
     historyApiFallback: true,
     onListening: (devServer) => {

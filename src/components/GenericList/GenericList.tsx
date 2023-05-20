@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { IGenericListProps } from '@/components/GenericList/GenericList.types';
 
 const GenericList = (props: IGenericListProps) => {
