@@ -70,6 +70,7 @@ const clientConfig = {
         use: {
           loader: 'babel-loader', // Ставим babel вместо ts-loader, потому что SSR пока что сыпет ошибку с ts-loader
           options: {
+            cacheDirectory: true,
             presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
           },
         },
