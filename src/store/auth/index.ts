@@ -1,3 +1,3 @@
-import authReducer from './authSlice';
+import profileReducer from './profileSlice';
 
-export { authReducer };
+export { profileReducer };

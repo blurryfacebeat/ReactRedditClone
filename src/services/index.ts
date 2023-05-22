@@ -1,1 +1,1 @@
-export { fetchProfileInfo } from './auth/auth.service';
+export { getProfile } from './auth/getProfile.service';

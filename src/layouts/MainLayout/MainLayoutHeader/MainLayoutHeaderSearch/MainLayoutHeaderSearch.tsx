@@ -1,16 +1,17 @@
-import { useContext } from 'react';
+import { useSelector } from 'react-redux';
 
-import { userContext } from '@/context';
+import { RootState } from '@/store/store';
+
 import { MainLayoutHeaderSearchUserBlock } from '@/layouts/MainLayout/MainLayoutHeader/MainLayoutHeaderSearch/MainLayoutHeaderSearchUserBlock';
 
 import styles from './MainLayoutHeaderSearch.module.scss';
 
 const MainLayoutHeaderSearch = () => {
-  const { name, iconImg } = useContext(userContext);
+  const profileData = useSelector((state: RootState) => state.profile.profileInfo);
 
   return (
     <div className={styles.searchBlock}>
-      <MainLayoutHeaderSearchUserBlock avatarSrc={iconImg} username={name} />
+      <MainLayoutHeaderSearchUserBlock avatarSrc={profileData.iconImg} username={profileData.name} />
     </div>
   );
 };
