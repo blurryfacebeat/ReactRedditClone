@@ -1,5 +1,5 @@
 export const getQueryFromRedditAuth = (urlHash: string) => {
-  const paramsMap = new Map();
+  const paramsMap = new Map<string, string>();
 
   const paramsArray = urlHash.replaceAll('#', '').split('&');
 

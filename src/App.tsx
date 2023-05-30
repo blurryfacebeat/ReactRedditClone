@@ -2,8 +2,8 @@ import { useEffect } from 'react';
 import { Provider as StoreProvider } from 'react-redux';
 
 import { useAuth } from '@/hooks';
-import { AppRoutes } from '@/routes/routes';
 import { store } from '@/store/store';
+import { AppRoutes } from '@/routes/routes';
 import { getProfile } from '@/store/auth/actions/profileActions';
 
 import { BaseLoader } from '@/components/Loaders';

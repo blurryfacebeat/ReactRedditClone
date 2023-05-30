@@ -9,3 +9,5 @@ export { merge } from './js/merge';
 export { isEqual } from './js/isEqual';
 export { compose, pipe } from './js/compose';
 export { pick, getValueNumber } from './js/pick';
+
+export { convertSecondsToDays } from './math';
